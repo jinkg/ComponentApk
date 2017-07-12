@@ -1,0 +1,1 @@
+include ':app', ':resourcesmanager', ':wrapper', ':componentcore', ':componentcoreapk'
