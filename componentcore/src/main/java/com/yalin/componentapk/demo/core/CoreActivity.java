@@ -1,17 +1,11 @@
 package com.yalin.componentapk.demo.core;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.content.res.ResourcesCompat;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import com.yalin.componentapk.wrapper.ActivityDelegate;
-
-import org.xmlpull.v1.XmlPullParser;
 
 /**
  * @author jinyalin
@@ -34,10 +28,14 @@ public class CoreActivity extends ActivityDelegate {
 
 
         Button button = (Button) findViewById(R.id.button);
+//        Context context = button.getContext();
+//        System.out.println(context);
         button.setText(R.string.haha);
 //        getResources().getXml(0x7f0a0011);
 
-//        imageView = (ImageView) findViewById(R.id.content);
+//        imageView = (ImageView) findViewById(R.id.content1);
+//        System.out.println(imageView);
+//        imageView.setImageResource(R.drawable.logo);
 
 //        Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.logo, null);
 

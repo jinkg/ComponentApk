@@ -29,9 +29,9 @@ public class WrapperClassLoader {
                 if (classLoader == null) {
                     File coreFilePath =
                             new File(Environment.getExternalStorageDirectory(), CORE_APK_FILE_NAME);
-                    resources = ResourcesManager.createResources(context.getApplicationContext(),
+                    resources = ResourcesManager.createCompatResources(context.getApplicationContext(),
                             coreFilePath.getAbsolutePath());
-                    classLoader = new DexClassLoader(coreFilePath.getAbsolutePath(),
+                    classLoader = new CompatClassLoader(coreFilePath.getAbsolutePath(),
                             context.getCacheDir().getAbsolutePath(),
                             null, context.getClassLoader());
                 }

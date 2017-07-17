@@ -1,6 +1,5 @@
 package com.yalin.componentapk.wrapper.component;
 
-import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.res.Resources;
 
@@ -12,18 +11,22 @@ import com.yalin.componentapk.wrapper.classloader.WrapperClassLoader;
  */
 
 public class ComponentContext extends ContextWrapper {
-    public ComponentContext(Context base) {
+    private Resources.Theme mTheme;
+
+    public ComponentContext(ContextWrapper base) {
+//        super(base.getBaseContext());
         super(base);
     }
 
-//    @Override
-//    public Resources getResources() {
-//        return WrapperClassLoader.getResources();
-//    }
+    @Override
+    public Resources getResources() {
+        return WrapperClassLoader.getResources();
+    }
 
     @Override
     public ClassLoader getClassLoader() {
         return WrapperClassLoader.getClassLoader();
     }
+
 }
 

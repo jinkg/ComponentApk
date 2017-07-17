@@ -48,6 +48,7 @@ public class ActivityDelegate {
             setContentView(viewFromPlugin);
         } catch (Exception e) {
             e.printStackTrace();
+            throw e;
         }
     }
 
